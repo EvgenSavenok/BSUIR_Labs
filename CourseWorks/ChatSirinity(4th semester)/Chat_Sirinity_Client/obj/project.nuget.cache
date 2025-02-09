@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "7t/OYpCoM4T2vFJTbyHx3xx2SJpMdpum8eYYbPhQt0sZINowtPGErSMbNq3oHBv4PQU+rksodtcpZztp9Xnf0g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\eugen\\RiderProjects\\Chat_Sirinity_Client\\Chat_Sirinity_Client.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\eugen\\.nuget\\packages\\ninject\\4.0.0-beta.1\\ninject.4.0.0-beta.1.nupkg.sha512"
+  ],
+  "logs": []
+}

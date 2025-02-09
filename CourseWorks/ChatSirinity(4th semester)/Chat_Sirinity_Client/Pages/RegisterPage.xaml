@@ -1,0 +1,193 @@
+﻿<Page x:Class="Chat_Sirinity_Client.Pages.RegisterPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d"
+      Title="RegisterPage" Height="450" Width="800">
+    <Page.Resources>
+        <ImageBrush x:Key="BackgroundBrush" ImageSource="/images/emoji-background.png" />
+        <LinearGradientBrush x:Key="GradientStyle" StartPoint="0.5,1" EndPoint="0.5,0">
+            <GradientStop Color="LightBlue" Offset="0" />
+            <GradientStop Color="Yellow" Offset="1" />
+        </LinearGradientBrush>
+        <Style x:Key="CustomButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource GradientStyle}" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#CCE5FF" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="UnderlineLabel" TargetType="Label">
+            <Setter Property="Foreground" Value="#c49a1a"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Label">
+                        <TextBlock Text="{TemplateBinding Content}" TextDecorations="Underline"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="Blue" /> 
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <Grid.Background>
+            <SolidColorBrush Color="#CCE5FF" />
+        </Grid.Background>
+        <Grid Background="{StaticResource BackgroundBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.3*" />
+                <RowDefinition Height="1.7*" />
+                <RowDefinition Height="0.6*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" HorizontalAlignment="Center">
+                <TextBlock
+                    Text="Регистрация"
+                    HorizontalAlignment="Center"
+                    FontSize="29"
+                    Foreground="#c49a1a"
+                    FontFamily="Segoe UI"
+                    Padding="0, 15, 0, 0">
+                </TextBlock>
+            </Grid>
+            <Border Background="White" CornerRadius="10" Padding="10" Width="350" 
+                    Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1">
+                <StackPanel>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1.03*" />
+                            <ColumnDefinition Width="0.8*" />
+                        </Grid.ColumnDefinitions>
+                        <Label
+                            Grid.Column="0"
+                            Content="Придумайте логин:"
+                            Foreground="#c49a1a"
+                            FontFamily="Segoe UI"
+                            FontSize="18" />
+                        <TextBox
+                            Grid.Column="1"
+                            x:Name="LoginTb"
+                            FontSize="16"
+                            Width="Auto"
+                            Height="24"
+                            KeyDown="RegisterTb_KeyDown">
+                        </TextBox>
+                    </Grid>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1.03*" />
+                            <ColumnDefinition Width="0.8*" />
+                        </Grid.ColumnDefinitions>
+                        <Label
+                            Grid.Column="0"
+                            Content="Придумайте пароль:"
+                            Foreground="#c49a1a"
+                            FontFamily="Segoe UI"
+                            FontSize="18" />
+                        <TextBox
+                            Grid.Column="1"
+                            x:Name="PasswordTb"
+                            FontSize="16"
+                            Width="Auto"
+                            Height="24"
+                            KeyDown="RegisterTb_KeyDown">
+                        </TextBox>
+                    </Grid>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1.03*" />
+                            <ColumnDefinition Width="0.8*" />
+                        </Grid.ColumnDefinitions>
+                        <Label
+                            Grid.Column="0"
+                            Content="Подтвердите пароль:"
+                            Foreground="#c49a1a"
+                            FontFamily="Segoe UI"
+                            FontSize="18" />
+                        <TextBox
+                            Grid.Column="1"
+                            x:Name="ConfirmPasswordTb"
+                            FontSize="16"
+                            Width="Auto"
+                            Height="24"
+                            KeyDown="RegisterTb_KeyDown">
+                        </TextBox>
+                    </Grid>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1.03*" />
+                            <ColumnDefinition Width="0.8*" />
+                        </Grid.ColumnDefinitions>
+                        <Label
+                            Grid.Column="0"
+                            Content="Введите почту:"
+                            Foreground="#c49a1a"
+                            FontFamily="Segoe UI"
+                            FontSize="18" />
+                        <TextBox
+                            Grid.Column="1"
+                            x:Name="EmailTb"
+                            FontSize="16"
+                            Width="Auto"
+                            Height="24"
+                            KeyDown="RegisterTb_KeyDown">
+                        </TextBox>
+                    </Grid>
+                    <Grid>
+                        <Label
+                            x:Name="ErrorRegisterLabel"
+                            Content=""
+                            FontSize="12"
+                            Foreground="Red"
+                            Visibility="Collapsed"
+                            Margin="0, 0, 0, -10">
+                        </Label>
+                    </Grid>
+                    <Grid>
+                        <Button
+                            Margin="0, 10, 0, 0"
+                            Content="Зарегистрироваться"
+                            FontSize="18"
+                            Height="40"
+                            Width="Auto"
+                            Style="{StaticResource CustomButtonStyle}"
+                            Click="RegisterBtn_CLick">
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </Border>
+            <Grid Grid.Row="2" HorizontalAlignment="Left">
+                <Label
+                    Content="На главную"
+                    FontFamily="Segoe UI"
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center"
+                    Margin="40, 0 , 0, 30"
+                    FontSize="24"
+                    Style="{StaticResource UnderlineLabel}"
+                    MouseLeftButtonDown="BackToWelcomePageBtn_Click">
+                </Label>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

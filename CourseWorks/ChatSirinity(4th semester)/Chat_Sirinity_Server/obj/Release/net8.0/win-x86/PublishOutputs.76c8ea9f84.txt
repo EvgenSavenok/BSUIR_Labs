@@ -1,0 +1,5 @@
+C:\Users\eugen\RiderProjects\Chat_Sirinity_Server\bin\Release\net8.0\win-x86\publish\appsettings.Development.json
+C:\Users\eugen\RiderProjects\Chat_Sirinity_Server\bin\Release\net8.0\win-x86\publish\appsettings.json
+C:\Users\eugen\RiderProjects\Chat_Sirinity_Server\bin\Release\net8.0\win-x86\publish\Chat_Sirinity_Server.pdb
+C:\Users\eugen\RiderProjects\Chat_Sirinity_Server\bin\Release\net8.0\win-x86\publish\aspnetcorev2_inprocess.dll
+C:\Users\eugen\RiderProjects\Chat_Sirinity_Server\bin\Release\net8.0\win-x86\publish\Chat_Sirinity_Server.exe

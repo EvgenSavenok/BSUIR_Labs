@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Chat_Sirinity_Client/1.0.0": {
+        "dependencies": {
+          "Ninject": "4.0.0-beta.1"
+        },
+        "runtime": {
+          "Chat_Sirinity_Client.dll": {}
+        }
+      },
+      "Ninject/4.0.0-beta.1": {
+        "runtime": {
+          "lib/net6.0/Ninject.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.1"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Chat_Sirinity_Client/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Ninject/4.0.0-beta.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nLUSEPhzXRYrw5PKB6wQIOTWN2dgvlvjjzr1QaQC1Bq8J/ca2wKdURoUWwFwAuQjG4hxP7aEeBscmPCF/OgYBQ==",
+      "path": "ninject/4.0.0-beta.1",
+      "hashPath": "ninject.4.0.0-beta.1.nupkg.sha512"
+    }
+  }
+}

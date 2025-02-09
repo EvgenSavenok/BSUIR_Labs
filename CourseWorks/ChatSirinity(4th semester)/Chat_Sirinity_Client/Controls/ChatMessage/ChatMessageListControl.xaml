@@ -1,0 +1,110 @@
+﻿<UserControl x:Class="Chat_Sirinity_Client.Controls.ChatMessageListControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Chat_Sirinity_Client.Controls"
+             xmlns:pages="clr-namespace:Chat_Sirinity_Client.Pages"
+             xmlns:design="clr-namespace:Chat_Sirinity_Client.Chats.Design"
+             xmlns:message="clr-namespace:Chat_Sirinity_Client.Chats.InputChatMessage"
+             xmlns:messageDesign="clr-namespace:Chat_Sirinity_Client.Chats.InputChatMessage.MessageDesign"
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="300">
+    <!-- <UserControl.Resources> -->
+    <!--     <ResourceDictionary Source="BtnStyles.xaml" /> -->
+    <!-- </UserControl.Resources> -->
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <!-- Title bar -->
+            <RowDefinition Height="Auto" />
+            <!-- Chat list -->
+            <RowDefinition Height="*" />
+            <!-- Message send text box -->
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- Title bar -->
+        <Grid Grid.Row="0" Background="White" Height="30">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Lera"
+                       Foreground="Black"
+                       FontSize="14"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+            <StackPanel Grid.Column="1"
+                        Orientation="Horizontal"
+                        Margin="0 0 5 0">
+                <Button Style="{StaticResource TitleBarBtnStyle}">
+                    <Image Source="/Images/TatleBarIcons/SearchIcon.png"></Image>
+                </Button>
+            </StackPanel>
+        </Grid>
+        <!-- Chat list -->
+        <Grid Grid.Row="1" DataContext="{x:Static messageDesign:ChatMessageListDesignModel.DesignInstance}">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <ItemsControl ItemsSource="{Binding Items}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <local:ChatMessageListItemControl />
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+        </Grid>
+
+        <Grid Grid.Row="2" Height="70"
+              Background="White">
+
+            <Grid.ColumnDefinitions>
+                <!-- Attach button -->
+                <ColumnDefinition Width="Auto" />
+                <!-- Text box -->
+                <ColumnDefinition Width="*" />
+                <!-- Additional buttons -->
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Attach button -->
+            <Button Margin="3 0 0 5"
+                    Height="{Binding Height, RelativeSource={RelativeSource AncestorType=Grid}}"
+                    Style="{StaticResource TitleBarBtnStyle}">
+                <Image Source="/Images/TextBoxIcons/PaperclipIcon.png"></Image>
+            </Button>
+
+            <!-- Text box -->
+            <TextBox Grid.Column="1"
+                     Padding="0 0 0 7"
+                     Tag="Царапать здесь..."
+                     Text="{Binding PendingMessageText, UpdateSourceTrigger=PropertyChanged}"
+                     FontSize="16"
+                     BorderThickness="0"
+                     AcceptsReturn="True"
+                     AcceptsTab="True"
+                     VerticalAlignment="Center" />
+
+            <!-- Additional buttons -->
+            <StackPanel Grid.Column="2"
+                        Orientation="Horizontal">
+                <!-- Smile button -->
+                <Button Margin="0 0 5 0"
+                        Height="{Binding Height, RelativeSource={RelativeSource AncestorType=Grid}}"
+                        Style="{StaticResource TitleBarBtnStyle}">
+                    <Image Source="/Images/TextBoxIcons/SmileIcon2.png"></Image>
+                </Button>
+                <!--Send button -->
+                <Button Style="{StaticResource TitleBarBtnStyle}"
+                        Margin="0 0 5 0 "
+                        Command="{Binding SendCommand}">
+                        <Image Source="/Images/TextBoxIcons/SendIcon.png"></Image>
+                </Button>
+            </StackPanel>
+
+        </Grid>
+
+    </Grid>
+
+</UserControl>

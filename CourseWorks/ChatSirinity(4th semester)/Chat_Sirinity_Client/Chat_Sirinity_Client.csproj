@@ -1,0 +1,90 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Page Update="Pages\LoginPage.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Update="Pages\WelcomePage.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Update="MainWindow.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Update="Styles\Styles.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Update="Controls\ChatMessage\ChatMessageListControl.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Update="Controls\ChatMessage\ChatMessageListItemControl.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Update="Controls\ChatList\ChatListControl.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Update="Controls\ChatList\ChatListItemControl.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Update="Controls\ChatList\SideMenuControl.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Update="Controls\ChatMessage\Styles\BtnStyles.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Images\emoji-background.png" />
+      <Resource Include="Images\emoji-background.png" />
+      <Resource Include="Images\SidePanelIcons\settings2.png" />
+      <None Remove="Images\SidePanelIcons\chats2.png" />
+      <Resource Include="Images\SidePanelIcons\chats.png" />
+      <None Remove="Images\SidePanelIcons\profile.png" />
+      <Resource Include="Images\SidePanelIcons\profile.png" />
+      <Resource Include="Images\SidePanelIcons\settings.png" />
+      <None Remove="Images\TatleBarIcons\Ionic-Ionicons-Search-circle.48.png" />
+      <None Remove="Images\TatleBarIcons\SearchIcon.png" />
+      <Resource Include="Images\TatleBarIcons\SearchIcon.png" />
+      <None Remove="Images\TextBoxIcons\PaperclipIcon2.png" />
+      <None Remove="Images\TextBoxIcons\Smile2.png" />
+      <None Remove="Images\TextBoxIcons\SendIcon.png" />
+      <Resource Include="Images\TextBoxIcons\SendIcon.png" />
+      <None Remove="Images\TextBoxIcons\SmileIcon.png" />
+      <Resource Include="Images\TextBoxIcons\SmileIcon2.png" />
+      <None Remove="Images\TextBoxIcons\PaperclipIcon.png" />
+      <Resource Include="Images\TextBoxIcons\PaperclipIcon.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Ninject" Version="4.0.0-beta.1" />
+    </ItemGroup>
+
+</Project>

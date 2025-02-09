@@ -1,0 +1,14 @@
+C:\Users\eugen\RiderProjects\KSiS_3_client\bin\Debug\net8.0\KSiS_3_client.exe
+C:\Users\eugen\RiderProjects\KSiS_3_client\bin\Debug\net8.0\KSiS_3_client.deps.json
+C:\Users\eugen\RiderProjects\KSiS_3_client\bin\Debug\net8.0\KSiS_3_client.runtimeconfig.json
+C:\Users\eugen\RiderProjects\KSiS_3_client\bin\Debug\net8.0\KSiS_3_client.dll
+C:\Users\eugen\RiderProjects\KSiS_3_client\bin\Debug\net8.0\KSiS_3_client.pdb
+C:\Users\eugen\RiderProjects\KSiS_3_client\obj\Debug\net8.0\KSiS_3_client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eugen\RiderProjects\KSiS_3_client\obj\Debug\net8.0\KSiS_3_client.AssemblyInfoInputs.cache
+C:\Users\eugen\RiderProjects\KSiS_3_client\obj\Debug\net8.0\KSiS_3_client.AssemblyInfo.cs
+C:\Users\eugen\RiderProjects\KSiS_3_client\obj\Debug\net8.0\KSiS_3_client.csproj.CoreCompileInputs.cache
+C:\Users\eugen\RiderProjects\KSiS_3_client\obj\Debug\net8.0\KSiS_3_client.dll
+C:\Users\eugen\RiderProjects\KSiS_3_client\obj\Debug\net8.0\refint\KSiS_3_client.dll
+C:\Users\eugen\RiderProjects\KSiS_3_client\obj\Debug\net8.0\KSiS_3_client.pdb
+C:\Users\eugen\RiderProjects\KSiS_3_client\obj\Debug\net8.0\KSiS_3_client.genruntimeconfig.cache
+C:\Users\eugen\RiderProjects\KSiS_3_client\obj\Debug\net8.0\ref\KSiS_3_client.dll

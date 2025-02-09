@@ -1,0 +1,6 @@
+@Chat_Sirinity_Server_HostAddress = http://localhost:5068
+
+GET {{Chat_Sirinity_Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
